@@ -17,5 +17,5 @@ RUN mkdir /app
 RUN apk update; apk add openssl; npm install --production -g ember-cli; \
     rm -rf /var/cache/apk/*
 WORKDIR /app
-CMD [/usr/local/lib/node_modules/ember-cli/bin/ember]
+ENTRYPOINT ["/usr/local/lib/node_modules/ember-cli/bin/ember"]
 
